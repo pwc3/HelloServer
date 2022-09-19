@@ -2,9 +2,10 @@
 
 ## Changes
 
-- Added new route `GET /hello/:name`
+- Grouped `/hello` routes
 
 ## Try This
 
-- Demo new route
+- Demo grouped routes
+  - `http GET :8080/hello`
   - `http GET :8080/hello/Vapor`
