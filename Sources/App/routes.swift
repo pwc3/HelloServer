@@ -22,6 +22,7 @@ func routes(_ app: Application) throws {
         try SignupInput.validate(content: req)
         let input = try req.content.decode(SignupInput.self)
         print("/signup:", input)
-        return HTTPStatus.ok
+
+        return SignupOutput(id: UUID(), name: input.name, email: input.email)
     }
 }
