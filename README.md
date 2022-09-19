@@ -2,10 +2,11 @@
 
 ## Changes
 
-- Grouped `/hello` routes
+- Added `SignupInput` DTO 
+- Added `POST /signup` route
 
 ## Try This
 
-- Demo grouped routes
-  - `http GET :8080/hello`
-  - `http GET :8080/hello/Vapor`
+- Demo new route
+  - `http POST :8080/signup < SampleJSON/valid-signup-input.json`
+  - `http POST :8080/signup < SampleJSON/invalid-signup-input.json`

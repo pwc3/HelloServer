@@ -17,4 +17,10 @@ func routes(_ app: Application) throws {
             return "Hello, \(name)!"
         }
     }
+
+    app.post("signup") { req in
+        let input = try req.content.decode(SignupInput.self)
+        print("/signup:", input)
+        return HTTPStatus.ok
+    }
 }
