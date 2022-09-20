@@ -2,10 +2,12 @@
 
 ## Changes
 
-- Added `SignupOutput` DTO to `POST /signup` response
+- None
 
 ## Try This
 
-- Demo updated route
-  - `http POST :8080/signup < SampleJSON/valid-signup-input.json`
-  - `http POST :8080/signup < SampleJSON/invalid-signup-input.json`
+- Docker
+  - `docker compose build`
+  - `docker compose up --detach app`
+  - `http GET :8080/hello`
+  - `docker compose down`
