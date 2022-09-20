@@ -25,4 +25,6 @@ func routes(_ app: Application) throws {
 
         return SignupOutput(id: UUID(), name: input.name, email: input.email)
     }
+
+    try app.register(collection: TodoController())
 }

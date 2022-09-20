@@ -7,6 +7,7 @@ FROM swift:5.7-focal as build
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
     && apt-get -q dist-upgrade -y \
+    && apt-get install -y libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set up a build area
@@ -51,6 +52,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q install -y \
       ca-certificates \
       tzdata \
+      sqlite3 \
 # If your app or its dependencies import FoundationNetworking, also install `libcurl4`.
       # libcurl4 \
 # If your app or its dependencies import FoundationXML, also install `libxml2`.
